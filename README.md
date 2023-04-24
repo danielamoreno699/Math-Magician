@@ -52,13 +52,6 @@ This project is meant to create a SPA with react and implement the functions of 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo Coming Soon <a name="live-demo"></a>
-
-- [Live Demo Link Coming Soon](#)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -117,7 +110,7 @@ If you like this project, let us know on any of my social media account ;)
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
+Thanks to my coding partners of Microverse 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,6 +118,6 @@ If you like this project, let us know on any of my social media account ;)
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https:/github.com/danielamoreno699/my-app-calculator/LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
