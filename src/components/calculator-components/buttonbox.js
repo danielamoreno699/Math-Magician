@@ -1,5 +1,5 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { ButtonNumber } from './button';
 
 const btnValues = [
   'AC', '+/-', '%', '/',
@@ -11,8 +11,10 @@ const btnValues = [
 
 const ButtonBox = () => (
   <div className="btn-box">
-    {btnValues.map((id, value) => (
-      <ButtonNumber key={id} value={value} />
+    {btnValues.map((value, i) => (
+
+      <button type="button" className="btn-number" key={i}>{value}</button>
+
     ))}
   </div>
 );
