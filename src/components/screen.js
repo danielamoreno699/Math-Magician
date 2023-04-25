@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-export const screen = () => {
-  return (
-   <div className="screen">11111</div>
-  )
-}
+export const screen = () => (
+  <div className="screen">10</div>
+);
 
-export default screen
+export default screen;

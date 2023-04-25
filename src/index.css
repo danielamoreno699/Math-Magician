@@ -1,11 +1,11 @@
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   height: 100vh;
   background-color: #f4f4f4;
   display: flex;
@@ -13,38 +13,35 @@ body{
   justify-content: center;
 }
 
-
-.screen{
+.screen {
   height: 4rem;
   background-color: #858693;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  color: white;
+  font-size: 2.5rem;
 }
 
-.wrapper{
+.wrapper {
   background: #f6f8f9;
   width: 33rem;
   padding: 2rem;
   margin-top: 4rem;
   border-radius: 1rem;
-  box-shadow: 4px 33px 50px 26px rgba(0,0,0,0.1);
+  box-shadow: 4px 33px 50px 26px rgba(0, 0, 0, 0.1);
 }
 
-.btn-box{
+.btn-box {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) ;
-  
- 
-  
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .btn-box > *:nth-child(4n+1):nth-last-child(-n+4) {
   grid-column: span 2;
-  
 }
 
-.btn-number{
+.btn-number {
   background-color: #e0e0e0;
   height: 3.5rem;
   padding: 20px;
@@ -55,12 +52,13 @@ body{
   color: rgb(21, 21, 20);
   border: none;
   font-size: 1.5rem;
-  border-style: groove ;
+  border-style: groove;
 }
 
-.btn-number:nth-last-child(4n+4){
-  background-color: rgb(249, 82, 66)
+.btn-number:nth-last-child(4n+4) {
+  background-color: rgb(249, 82, 66);
 }
+
 .btn-number:nth-last-child(1) {
-  background-color:  rgb(249, 82, 66)
+  background-color: rgb(249, 82, 66);
 }

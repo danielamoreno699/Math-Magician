@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonNumber from './button';
+import { ButtonNumber } from './button';
 
 const btnValues = [
   'AC', '+/-', '%', '/',
@@ -9,14 +9,12 @@ const btnValues = [
   0, '.', '=',
 ];
 
-const ButtonBox = () => {
-  return (
-    <div className="btn-box">
-      {btnValues.map((value, Index) => (
-            <ButtonNumber key={`${Index}`} value={value} />
-      ))}
-    </div>
-  );
-};
+const ButtonBox = () => (
+  <div className="btn-box">
+    {btnValues.map((id, value) => (
+      <ButtonNumber key={id} value={value} />
+    ))}
+  </div>
+);
 
 export default ButtonBox;
