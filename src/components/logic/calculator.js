@@ -14,7 +14,7 @@ const Calculator = () => {
 
     return (
       <div className="wrapper">
-        <Screen />
+        <Screen  value={calc.screenValue}/>
         <ButtonBox  calc={calc} setCalc={setCalc} operate={operate}/>
       </div>
     );
