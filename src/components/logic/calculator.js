@@ -6,9 +6,10 @@ import { operate } from '../logic/operate';
 const Calculator = () => {
   
   const [calc, setCalc] = useState({
-    operator: '',
-    num: 0,
-    result: 0,
+    operator: null,
+    operand1: null,
+    operand2: null,
+    result: null,
     screenValue: '',
   });
 

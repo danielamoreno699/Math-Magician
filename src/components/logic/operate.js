@@ -15,25 +15,32 @@ export const operate = (operator, operand1, operand2) => {
         return 0;
     }
   };
-
   
+
+
+
   export const numClickHandler = (value, calc, setCalc) => {
     const newScreenValue = calc.screenValue + value.toString();
+    const num = parseFloat(newScreenValue);
+    const result = calc.operator ? operate(calc.operator, calc.result, num) : num;
     setCalc({
-        ...calc,
-        num: parseFloat(newScreenValue),
-        screenValue: newScreenValue,
-      });
+      ...calc,
+      result,
+      num,
+      screenValue: newScreenValue,
+    });
     console.log(`Number ${value} was clicked`);
+    console.log('numClick', result, num);
   };
-
-
-export const signClickHandler = (operator, calc, setCalc) => {
+  
+  export const signClickHandler = (operator, calc, setCalc) => {
     console.log(`Sign ${operator} was clicked`);
     const newScreenValue = calc.screenValue + operator;
+    let result = calc.result;
     if (calc.operator && calc.num !== 0) {
-      const result = operate(calc.operator, calc.result, calc.num);
+      result = operate(calc.operator, calc.result, calc.num);
       setCalc({
+        ...calc,
         operator,
         num: 0,
         result,
@@ -41,27 +48,34 @@ export const signClickHandler = (operator, calc, setCalc) => {
       });
     } else {
       setCalc({
+        ...calc,
         operator,
-        num: calc.num,
-        result: calc.result,
         screenValue: newScreenValue,
       });
     }
+    console.log('signClick', result, calc.num);
   };
+  
+
   
 
   
   export const equalClickHandler = (calc, setCalc) => {
     console.log(`Equal was clicked`);
-    const result = operate(calc.operator, calc.result, calc.num);
+    let result;
+    if (calc.operator) {
+      result = operate(calc.operator, calc.result, calc.num);
+    } else {
+      result = calc.result;
+    }
     setCalc({
-        operator: '',
-        num: 0,
-        result,
-        screenValue: result.toString(),
-  });
-
+      ...calc, 
+      result,
+      screenValue: result.toString(),
+    });
+    console.log('equal', result);
   };
+  
   
   export const commaClickHandler = (value, calc, setCalc) => {
     console.log(`Comma ${value} was clicked`);
