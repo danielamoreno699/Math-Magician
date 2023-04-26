@@ -12,6 +12,7 @@ export const operate = (operator, operand1, operand2) => {
             return operand1 * operand2;
         case '/':
             return operand1 / operand2;
+       
         default:
             return 0;
     }
@@ -95,5 +96,16 @@ export const resetClickHandler = (calc, setCalc, value) => {
 };
 
 export const percentClickHandler = (value, calc, setCalc) => {
-  console.log(`Percent ${value} was clicked`);
-};
+    console.log(`Percent ${value} was clicked`);
+    
+    const num = parseFloat(calc.screenValue);
+    const percent = operate('/', num, 100);
+    const result = operate(calc.operator, parseFloat(calc.operand1), percent);
+    setCalc({
+        ...calc,
+        operand2: percent,
+        screenValue: percent.toString(),
+        result: result,
+      });
+  };
+  
