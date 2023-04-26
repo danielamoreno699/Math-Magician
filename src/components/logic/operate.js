@@ -76,13 +76,6 @@ export const equalClickHandler = (calc, setCalc) => {
 
 
 
-export const commaClickHandler = (value, calc, setCalc) => {
-  console.log(`Comma ${value} was clicked`);
-};
-
-export const invertClickHandler = (value, calc, setCalc) => {
-  console.log(`Invert ${value} was clicked`);
-};
 
 export const resetClickHandler = (calc, setCalc, value) => {
   console.log(`Reset ${value} was clicked`);
@@ -109,3 +102,24 @@ export const percentClickHandler = (value, calc, setCalc) => {
       });
   };
   
+  
+  export const commaClickHandler = (value, calc, setCalc) => {
+    console.log(`Comma ${value} was clicked`);
+    const num = parseFloat(calc.screenValue);
+    console.log('comma', num)
+    if (!isNaN(num)) {
+      setCalc({
+        ...calc,
+        screenValue: num.toLocaleString('en-US', { maximumFractionDigits: 10 }) + '.',
+        operand2: calc.operator ? num : parseFloat(calc.operand2),
+        operand1: calc.operator ? parseFloat(calc.operand1) : parseFloat(calc.screenValue),
+        result: calc.operator ? operate(calc.operator, parseFloat(calc.operand1), num) : calc.result
+      });
+    }
+  };
+  
+
+  
+  export const invertClickHandler = (value, calc, setCalc) => {
+    console.log(`Invert ${value} was clicked`);
+  };
