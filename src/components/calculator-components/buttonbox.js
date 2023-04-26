@@ -1,6 +1,5 @@
-/* eslint-disable react/no-array-index-key */
-import React from 'react';
-import { handleClick, numClickHandler, signClickHandler, percentClickHandler, equalClickHandler, invertClickHandler, resetClickHandler, commaClickHandler } from '../logic/operate';
+import React, { useState } from 'react';
+import {  numClickHandler, signClickHandler, percentClickHandler, equalClickHandler, invertClickHandler, resetClickHandler, commaClickHandler, operate } from '../logic/operate';
 
 const btnValues = [
   'AC', '+/-', '%', '/',
@@ -10,43 +9,60 @@ const btnValues = [
   0, '.', '=',
 ];
 
+const ButtonBox = () => {
+  const [calc, setCalc] = useState({
+    operator: '',
+    num: 0,
+    result: 0,
+  });
 
-const ButtonBox = () => (
-  <div className="btn-box">
-    {btnValues.map((value, i) => (
+  const handleButtonClick = (value) => {
+    if (typeof value === 'number') {
+      numClickHandler(value, calc, setCalc);
+    } else {
+      switch (value) {
+        case '+':
+        case '-':
+        case 'x':
+        case '/':
+          signClickHandler(value, calc, setCalc);
+          break;
+        case '=':
+          equalClickHandler(calc, setCalc, operate);
+          break;
+        case '%':
+          percentClickHandler(value, calc, setCalc);
+          break;
+        case '.':
+          commaClickHandler(value, calc, setCalc);
+          break;
+        case '+/-':
+          invertClickHandler(value, calc, setCalc);
+          break;
+        case 'AC':
+          resetClickHandler(calc, setCalc, value);
+          break;
+        default:
+          break;
+      }
+    }
+  };
 
-      <button 
-        type="button" 
-        className={`btn-number`} 
-        key={i} 
-        value= {value}
-        onClick = {
-          
-          value === "AC"
-          ? () => resetClickHandler(value)
-          : value === "+-"
-                  ? () => invertClickHandler(value)
-                  : value === "%"
-                  ? () => percentClickHandler(value)
-                  : value === "="
-                  ? () => equalClickHandler(value)
-                  : value === "/" || value === "x" || value === "-" || value === "+"
-                  ? () => signClickHandler(value)
-                  : value === "."
-                  ? () => commaClickHandler(value)
-                  : () => numClickHandler(value)
-                  
-        }
-        // onClick={() => handleClick(value)}
-        >   {value}
-        
-      
-        
+  return (
+    <div className="btn-box">
+      {btnValues.map((value, i) => (
+        <button
+          type="button"
+          className={`btn-number`}
+          key={i}
+          value={value}
+          onClick={() => handleButtonClick(value)}
+        >
+          {value}
         </button>
-
-
-    ))}
-  </div>
-);
+      ))}
+    </div>
+  );
+};
 
 export default ButtonBox;
