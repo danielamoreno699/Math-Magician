@@ -2,97 +2,98 @@ import Calculator from "./calculator";
 import ButtonBox from "../calculator-components/buttonbox";
 
 export const operate = (operator, operand1, operand2) => {
+    console.log("operate:", operator, operand1, operand2);
     switch (operator) {
-      case '+':
-        return operand1 + operand2;
-      case '-':
-        return operand1 - operand2;
-      case 'x':
-        return operand1 * operand2;
-      case '/':
-        return operand1 / operand2;
-      default:
-        return 0;
+        case '+':
+            return operand1 + operand2;
+        case '-':
+            return operand1 - operand2;
+        case 'x':
+            return operand1 * operand2;
+        case '/':
+            return operand1 / operand2;
+        default:
+            return 0;
     }
-  };
-  
+};
 
-
-
-  export const numClickHandler = (value, calc, setCalc) => {
-    const newScreenValue = calc.screenValue + value.toString();
+export const numClickHandler = (value, calc, setCalc) => {
+    let newScreenValue = calc.screenValue;
+    if (newScreenValue === "0") {
+        newScreenValue = "";
+    }
+    newScreenValue += value.toString();
     const num = parseFloat(newScreenValue);
-    const result = calc.operator ? operate(calc.operator, calc.result, num) : num;
+  
     setCalc({
-      ...calc,
-      result,
-      num,
-      screenValue: newScreenValue,
+        ...calc,
+        operand2: num,
+        screenValue: newScreenValue,
     });
     console.log(`Number ${value} was clicked`);
-    console.log('numClick', result, num);
-  };
-  
-  export const signClickHandler = (operator, calc, setCalc) => {
+};
+
+export const signClickHandler = (operator, calc, setCalc) => {
     console.log(`Sign ${operator} was clicked`);
-    const newScreenValue = calc.screenValue + operator;
-    let result = calc.result;
-    if (calc.operator && calc.num !== 0) {
-      result = operate(calc.operator, calc.result, calc.num);
-      setCalc({
-        ...calc,
-        operator,
-        num: 0,
-        result,
-        screenValue: newScreenValue,
-      });
+    if(calc.operator) {
+        const result = operate(calc.operator, parseFloat(calc.operand1), parseFloat(calc.operand2));
+        setCalc({
+            ...calc,
+            operand1: result,
+            operand2: null,
+            result: result,
+            operator: operator,
+            screenValue: result.toString(),
+        });
+        console.log('signClick', result);
     } else {
-      setCalc({
-        ...calc,
-        operator,
-        screenValue: newScreenValue,
-      });
+        setCalc({
+            ...calc,
+            operator: operator,
+            operand1: parseFloat(calc.screenValue),
+            screenValue: "",
+        });
     }
-    console.log('signClick', result, calc.num);
-  };
-  
+};
 
-  
-
-  
-  export const equalClickHandler = (calc, setCalc) => {
+export const equalClickHandler = (calc, setCalc) => {
     console.log(`Equal was clicked`);
-    let result;
-    if (calc.operator) {
-      result = operate(calc.operator, calc.result, calc.num);
-    } else {
-      result = calc.result;
+    let result = calc.result;
+    if (calc.operator && calc.operand2 !== null) {
+        result = operate(calc.operator, parseFloat(calc.operand1), parseFloat(calc.operand2));
     }
     setCalc({
-      ...calc, 
-      result,
-      screenValue: result.toString(),
+        ...calc, 
+        operator: '',
+        operand1: 0,
+        operand2: 0,
+        result,
+        screenValue: result.toString(),
     });
     console.log('equal', result);
-  };
-  
-  
-  export const commaClickHandler = (value, calc, setCalc) => {
-    console.log(`Comma ${value} was clicked`);
+};
 
-  };
-  
-  export const invertClickHandler = (value, calc, setCalc) => {
-    console.log(`Invert ${value} was clicked`);
- 
-  };
-  
-  export const resetClickHandler = (calc, setCalc, value) => {
-    console.log(`Reset ${value} was clicked`);
-   
-  };
-  
-  export const percentClickHandler = (value, calc, setCalc) => {
-    console.log(`Percent ${value} was clicked`);
 
-  };
+
+export const commaClickHandler = (value, calc, setCalc) => {
+  console.log(`Comma ${value} was clicked`);
+};
+
+export const invertClickHandler = (value, calc, setCalc) => {
+  console.log(`Invert ${value} was clicked`);
+};
+
+export const resetClickHandler = (calc, setCalc, value) => {
+  console.log(`Reset ${value} was clicked`);
+  setCalc({
+    screenValue: "0",
+    result: null,
+    operand1: null,
+    operand2: null,
+    operator: null,
+  });
+};
+
+export const percentClickHandler = (value, calc, setCalc) => {
+  console.log(`Percent ${value} was clicked`);
+};
