@@ -1,14 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import ButtonBox from '../calculator-components/buttonbox';
+import Screen from '../calculator-components/screen';
+import { operate } from '../logic/operate';
 
-const Calculator = ({ children }) => (
-  <div className="wrapper">
-    {children}
-  </div>
-);
+const Calculator = () => {
+  
+  const [calc, setCalc] = useState({
+    operator: '',
+    num: 0,
+    result: 0,
+    screenValue: '',
+  });
 
-Calculator.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
+    return (
+      <div className="wrapper">
+        <Screen />
+        <ButtonBox  calc={calc} setCalc={setCalc} operate={operate}/>
+      </div>
+    );
+  }
 export default Calculator;

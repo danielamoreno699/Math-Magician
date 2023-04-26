@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  numClickHandler, signClickHandler, percentClickHandler, equalClickHandler, invertClickHandler, resetClickHandler, commaClickHandler, operate } from '../logic/operate';
+import {  numClickHandler, signClickHandler, percentClickHandler, equalClickHandler, invertClickHandler, resetClickHandler, commaClickHandler} from '../logic/operate';
 
 const btnValues = [
   'AC', '+/-', '%', '/',
@@ -9,13 +9,8 @@ const btnValues = [
   0, '.', '=',
 ];
 
-const ButtonBox = () => {
-  const [calc, setCalc] = useState({
-    operator: '',
-    num: 0,
-    result: 0,
-  });
 
+const ButtonBox = ({ calc, setCalc, operate }) => {
   const handleButtonClick = (value) => {
     if (typeof value === 'number') {
       numClickHandler(value, calc, setCalc);
@@ -64,5 +59,7 @@ const ButtonBox = () => {
     </div>
   );
 };
+
+
 
 export default ButtonBox;
