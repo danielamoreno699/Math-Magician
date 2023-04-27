@@ -1,5 +1,15 @@
-import React, { useState } from 'react';
-import {  numClickHandler, signClickHandler, percentClickHandler, equalClickHandler, invertClickHandler, resetClickHandler, commaClickHandler} from '../logic/operate';
+/* eslint-disable react/no-array-index-key */
+
+import PropTypes from 'prop-types';
+import {
+  numClickHandler,
+  signClickHandler,
+  percentClickHandler,
+  equalClickHandler,
+  invertClickHandler,
+  resetClickHandler,
+  commaClickHandler,
+} from '../logic/operate';
 
 const btnValues = [
   'AC', '+/-', '%', '/',
@@ -8,7 +18,6 @@ const btnValues = [
   1, 2, 3, '+',
   0, '.', '=',
 ];
-
 
 const ButtonBox = ({ calc, setCalc, operate }) => {
   const handleButtonClick = (value) => {
@@ -48,7 +57,7 @@ const ButtonBox = ({ calc, setCalc, operate }) => {
       {btnValues.map((value, i) => (
         <button
           type="button"
-          className={`btn-number`}
+          className="btn-number"
           key={i}
           value={value}
           onClick={() => handleButtonClick(value)}
@@ -60,6 +69,10 @@ const ButtonBox = ({ calc, setCalc, operate }) => {
   );
 };
 
-
+ButtonBox.propTypes = {
+  calc: PropTypes.number.isRequired,
+  setCalc: PropTypes.func.isRequired,
+  operate: PropTypes.string.isRequired,
+};
 
 export default ButtonBox;

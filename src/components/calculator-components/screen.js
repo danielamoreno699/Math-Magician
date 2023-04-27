@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const screen = ({value}) => (
+export const screen = ({ value }) => (
   <div className="screen">{value}</div>
 );
 
