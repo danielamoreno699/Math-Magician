@@ -1,14 +1,14 @@
 import React from 'react';
-import Calculator from './components/logic/calculator';
+import Calculator from './components/calculator-components/calculator';
 
 function App() {
   return (
-    <div className="App">
+
       <div className="App">
         <Calculator />
 
       </div>
-    </div>
+  
   );
 }
 
