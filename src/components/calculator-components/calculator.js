@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types';
 import CalcComponents from './children';
-
 
 const Calculator = ({ value }) => (
   <div>
@@ -9,3 +9,7 @@ const Calculator = ({ value }) => (
 
 );
 export default Calculator;
+
+Calculator.propTypes = {
+  value: PropTypes.string.isRequired,
+};

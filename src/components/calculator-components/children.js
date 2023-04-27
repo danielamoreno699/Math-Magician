@@ -1,8 +1,8 @@
+/* eslint-disable-line react/no-array-index-key */
 import React, { useState } from 'react';
 import calculate from '../logic/caculate';
 
-const CalcComponents = ({ value }) => {
-
+const CalcComponents = () => {
   const btnValues = [
     'AC', '+/-', '%', '÷',
     '7', '8', '9', 'x',
@@ -14,14 +14,13 @@ const CalcComponents = ({ value }) => {
   const [calc, setCalculator] = useState({
     total: 0,
     next: null,
-    operation: null
+    operation: null,
   });
 
   const handleButtonClick = (buttonName) => {
     setCalculator((prevState) => {
-      console.log("Button value is: " + buttonName);
       const newResult = calculate(prevState, buttonName.target.textContent);
-      return { ...prevState, ...newResult }
+      return { ...prevState, ...newResult };
     });
   };
 
@@ -33,8 +32,8 @@ const CalcComponents = ({ value }) => {
         {calc.next}
       </div>
       <div className="btn-box">
-        {btnValues.map((value, i) => (
-          <button type="button" className="btn-number" key={i} onClick={handleButtonClick}>{value}</button>
+        {btnValues.map((value) => (
+          <button type="button" className="btn-number" key={value} onClick={handleButtonClick}>{value}</button>
         ))}
       </div>
     </div>
