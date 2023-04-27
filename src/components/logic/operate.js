@@ -122,4 +122,16 @@ export const percentClickHandler = (value, calc, setCalc) => {
   
   export const invertClickHandler = (value, calc, setCalc) => {
     console.log(`Invert ${value} was clicked`);
+    const num = parseFloat(calc.screenValue);
+    const newNum = isNaN(num) ? 0 : -num;
+
+    setCalc({
+        ...calc,
+        screenValue: newNum.toString(),
+        operand1: calc.operator ? parseFloat(calc.operand1) : newNum,
+        operand2: calc.operator ? newNum : parseFloat(calc.operand2),
+        result: calc.operator ? operate(calc.operator, parseFloat(calc.operand1), newNum) : calc.result,
+    });
+    
+
   };
