@@ -1,40 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@1,300&family=Roboto+Slab&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
 }
 
 body {
   height: 100vh;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.screen {
+  height: 4rem;
+  background-color: #a5a5ab;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  /* color: white; */
+  font-size: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.screen {
-  height: 4rem;
-  background-color: #858693;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  color: white;
-  font-size: 2.5rem;
-}
-
 .wrapper {
-  background: #f6f8f9;
+  background: #dee0e1;
   width: 33rem;
   padding: 2rem;
   margin-top: 4rem;
   border-radius: 1rem;
   box-shadow: 4px 33px 50px 26px rgba(0, 0, 0, 0.1);
+ 
 }
 
 .btn-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+ 
 }
 
 .btn-box > *:nth-child(4n+1):nth-last-child(-n+4) {
@@ -61,4 +71,26 @@ body {
 
 .btn-number:nth-last-child(1) {
   background-color: rgb(249, 82, 66);
+}
+
+.quote-container{
+  width: 29rem;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+
+}
+
+.quote-text {
+  font-family: cursive;
+  font-size: 50px;
+  font-weight: 900;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.author {
+ 
+  font-size: 14px;
+  color: #666;
 }
