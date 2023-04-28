@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@1,300&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@1,300&family=Roboto+Slab&display=swap');
 
 * {
@@ -11,11 +10,11 @@
 
 body {
   height: 100vh;
+
   /* background-color: #f4f4f4; */
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .screen {
@@ -24,11 +23,7 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
-  /* color: white; */
   font-size: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .wrapper {
@@ -38,13 +33,11 @@ body {
   margin-top: 4rem;
   border-radius: 1rem;
   box-shadow: 4px 33px 50px 26px rgba(0, 0, 0, 0.1);
- 
 }
 
 .btn-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
- 
 }
 
 .btn-box > *:nth-child(4n+1):nth-last-child(-n+4) {
@@ -73,12 +66,11 @@ body {
   background-color: rgb(249, 82, 66);
 }
 
-.quote-container{
+.quote-container {
   width: 29rem;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
-
 }
 
 .quote-text {
@@ -90,7 +82,6 @@ body {
 }
 
 .author {
- 
   font-size: 14px;
   color: #666;
 }

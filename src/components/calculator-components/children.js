@@ -41,4 +41,3 @@ const CalcComponents = () => {
 };
 
 export default CalcComponents;
-

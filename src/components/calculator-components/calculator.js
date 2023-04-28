@@ -3,7 +3,7 @@ import CalcComponents from './children';
 
 const Calculator = ({ value }) => (
   <div>
-    
+
     <CalcComponents value={value} />
   </div>
 
