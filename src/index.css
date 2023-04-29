@@ -24,12 +24,13 @@ body {
   justify-content: end;
   align-items: center;
   font-size: 2.5rem;
+  padding: 1rem;
 }
 
 .wrapper {
-  background: #dee0e1;
+  background: #06161e;
   width: 33rem;
-  padding: 2rem;
+  padding: 1rem;
   margin-top: 4rem;
   border-radius: 1rem;
   box-shadow: 4px 33px 50px 26px rgba(0, 0, 0, 0.1);

@@ -28,12 +28,12 @@ const Quotes = () => {
     fetchData();
   }, [category]);
 
-  if (hasError || quotes.length === 0) {
-    return <div>Something went wrong!</div>;
-  }
-
   if (isLoading) {
     return <div>Loading...</div>;
+  }
+
+  if (hasError || quotes.length === 0) {
+    return <div>Something went wrong!</div>;
   }
 
   return (
