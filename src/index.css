@@ -9,12 +9,23 @@
 }
 
 body {
-  height: 100vh;
+  height: 90vh;
+  background-image: url('https://freevector-images.s3.amazonaws.com/uploads/vector/preview/40529/White_Background_generated.jpg');
+  background-size: cover;
+}
 
-  /* background-color: #f4f4f4; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.custom-navbar {
+  background-color: #e3f2fd;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+}
+
+.navbar-brand {
+  padding: 0.5rem;
+}
+
+.Magician-txt {
+  color: white;
 }
 
 .screen {
@@ -29,9 +40,9 @@ body {
 
 .wrapper {
   background: #06161e;
-  width: 33rem;
+  width: 50rem;
+  height: 32rem;
   padding: 1rem;
-  margin-top: 4rem;
   border-radius: 1rem;
   box-shadow: 4px 33px 50px 26px rgba(0, 0, 0, 0.1);
 }
@@ -47,7 +58,6 @@ body {
 
 .btn-number {
   background-color: #e0e0e0;
-  height: 3.5rem;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -67,22 +77,42 @@ body {
   background-color: rgb(249, 82, 66);
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 23rem;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 23rem;
+}
+
+.wrapper-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 23rem;
+}
+
 .quote-container {
-  width: 29rem;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote-text {
   font-family: cursive;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 900;
   color: black;
   margin-bottom: 5px;
 }
 
 .author {
-  font-size: 14px;
+  font-size: 20px;
   color: #666;
 }

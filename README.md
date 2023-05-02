@@ -31,7 +31,7 @@
 # 📖 Math Magicians <a name="about-project"></a>
 
 
-**Math Magicians CAalculator app** "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
+**Math Magicians Calculator app** "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
 
 - Make simple calculations.
 - Read a random math-related quote.
@@ -45,6 +45,7 @@ By building this application, using React.
 - **[Its a simple design]**
 - **[its clear]**
 - **[its friendly]**
+- **[it has navigation routers]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,8 +121,8 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **[Implement Routes]**
-- **[Implement Apis]**
+- **[design]**
+- **[other features]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

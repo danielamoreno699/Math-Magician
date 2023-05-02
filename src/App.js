@@ -1,13 +1,11 @@
 import React from 'react';
-import Calculator from './components/calculator-components/calculator';
-import Quotes from './components/calculator-components/quotes';
+import MagicianRoutes from './routes/MagicianRoutes';
 
 function App() {
   return (
 
     <div className="App">
-      <Calculator />
-      <Quotes />
+      <MagicianRoutes />
     </div>
 
   );
