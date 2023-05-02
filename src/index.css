@@ -14,18 +14,18 @@ body {
   background-size: cover;
 }
 
-.custom-navbar{
-  background-color:#e3f2fd;
+.custom-navbar {
+  background-color: #e3f2fd;
   font-family: 'Arial', sans-serif;
   font-size: 20px;
 }
 
-.navbar-brand{
+.navbar-brand {
   padding: 0.5rem;
 }
 
-.Magician-txt{
-  color: white
+.Magician-txt {
+  color: white;
 }
 
 .screen {
@@ -49,7 +49,6 @@ body {
   width: 50rem;
   height: 32rem;
   padding: 1rem;
-
   border-radius: 1rem;
   box-shadow: 4px 33px 50px 26px rgba(0, 0, 0, 0.1);
 }
@@ -65,8 +64,6 @@ body {
 
 .btn-number {
   background-color: #e0e0e0;
-  height: fit-content;
-  /* height: 3.5rem; */
   padding: 20px;
   display: flex;
   align-items: center;
@@ -86,23 +83,21 @@ body {
   background-color: rgb(249, 82, 66);
 }
 
-.loading{
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 23rem;
-
 }
 
-.error{
+.error {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 23rem;
-
 }
 
-.wrapper-quote{
+.wrapper-quote {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,11 +105,9 @@ body {
 }
 
 .quote-container {
-  
- display: flex;
- justify-content: center;
- align-items: center;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote-text {
@@ -123,7 +116,6 @@ body {
   font-weight: 900;
   color: black;
   margin-bottom: 5px;
-  
 }
 
 .author {

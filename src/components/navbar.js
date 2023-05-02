@@ -6,7 +6,7 @@ const Navbar = () => (
     <div>
 
       <h2 className="Magician-txt">Math Magicians</h2>
-      <img src="../../public/—Pngtree—wizard hat free png material_4534384.png" alt="hat" />
+
     </div>
 
     <div className="navbar-nav">
