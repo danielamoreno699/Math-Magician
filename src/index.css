@@ -9,12 +9,9 @@
 }
 
 body {
-  height: 100vh;
-
-  /* background-color: #f4f4f4; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+  height: 90vh;
+  background-image: url('https://freevector-images.s3.amazonaws.com/uploads/vector/preview/40529/White_Background_generated.jpg');
+  background-size: cover;
 }
 
 .custom-navbar{
@@ -27,8 +24,8 @@ body {
   padding: 0.5rem;
 }
 
-.calc-container{
-  margin-top: 15rem;
+.Magician-txt{
+  color: white
 }
 
 .screen {
