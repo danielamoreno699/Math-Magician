@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Navbar from '../components/navbar';
+
 import Calculator from '../components/calculator/calculator';
 import Home from '../components/home';
 import Quotes from '../components/quotes';
