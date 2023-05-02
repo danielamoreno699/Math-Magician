@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
@@ -11,7 +10,6 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-
     </BrowserRouter>
   </React.StrictMode>,
 );
