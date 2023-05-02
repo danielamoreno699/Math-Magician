@@ -1,13 +1,19 @@
 import React from 'react';
-import Calculator from './components/calculator-components/calculator';
-import Quotes from './components/calculator-components/quotes';
+import MagicianRoutes from './routes/MagicianRoutes';
+// import Calculator from './components/calculator/calculator';
+// import Quotes from './components/quotes';
+// import Navbar from './components/navbar';
+// import Home from './components/home';
 
 function App() {
   return (
 
     <div className="App">
+      <MagicianRoutes />
+      {/* <Navbar />
+      <Home />
       <Calculator />
-      <Quotes />
+      <Quotes /> */}
     </div>
 
   );

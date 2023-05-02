@@ -29,19 +29,24 @@ const Quotes = () => {
   }, [category]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="alert alert-success loading" role="alert">Loading...</div>;
   }
 
   if (hasError || quotes.length === 0) {
-    return <div>Something went wrong!</div>;
+    return <div className="alert alert-danger error" role="alert">Something went wrong!</div>;
   }
 
   return (
-    <div>
+    <div className="wrapper-quote">
       {quotes.map((quote) => (
         <div className="quote-container" key={quote}>
-          <p className="quote"><q>{quote.quote}</q></p>
-          <p className="author">{quote.author}</p>
+          <div className="row">
+            <div className="col">
+              <p className="quote"><q>{quote.quote}</q></p>
+              <p className="author">{quote.author}</p>
+            </div>
+
+          </div>
         </div>
       ))}
     </div>
