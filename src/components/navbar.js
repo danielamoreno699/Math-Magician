@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => (

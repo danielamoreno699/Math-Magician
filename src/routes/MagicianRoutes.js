@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import Calculator from '../components/calculator/calculator';
