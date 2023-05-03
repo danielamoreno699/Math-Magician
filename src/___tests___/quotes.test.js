@@ -31,6 +31,6 @@ describe('Quotes', () => {
     const quoteText = await screen.findByText('Quote 1');
     const authorText = await screen.findByText('Author 1');
     expect(quoteText).toBeInTheDocument();
-    expect(authorText).toBeInTheDocument()
+    expect(authorText).toBeInTheDocument();
   });
 });
