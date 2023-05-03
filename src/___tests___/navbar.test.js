@@ -27,12 +27,12 @@ describe('navbar component tests', () => {
     fireEvent.click(homeLink);
     const quoteLink = screen.getByText('Quotes', { selector: 'a' });
     fireEvent.click(quoteLink);
- 
+
     expect(navigate).toHaveBeenCalledWith('/', { replace: true });
     expect(navigate).toHaveBeenCalledWith('/Calculator', { replace: false });
     expect(navigate).toHaveBeenCalledWith('/Quotes', { replace: false });
   });
-  
+
   test('active class is applied when the link is active', () => {
     render(
       <MemoryRouter initialEntries={['/Calculator']}>
