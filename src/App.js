@@ -1,8 +1,5 @@
-
 import React from 'react';
 import MagicianRoutes from './routes/MagicianRoutes';
-
-
 
 function App() {
   return (

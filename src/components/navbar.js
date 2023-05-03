@@ -1,6 +1,4 @@
-import { Link, NavLink, useLocation } from 'react-router-dom';
-
-
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => (
   <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-4 d-flex  justify-content-between custom-navbar">
