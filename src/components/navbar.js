@@ -11,7 +11,7 @@ const Navbar = () => (
     <div className="navbar-nav">
 
       <Link
-        className="navbar-brand"
+        className="navbar-brand home-page"
         to="/"
       >
         Home

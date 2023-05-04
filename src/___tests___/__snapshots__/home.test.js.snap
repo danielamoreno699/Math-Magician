@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`must show content when the user navigates to the home page  when navigates to home page it displays the title  1`] = `
+<div
+  class="text mt-5"
+>
+  <h1>
+    Welcome to our page
+  </h1>
+  <p
+    class="p-one mt-4"
+  >
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repudiandae dolor similique, nulla quam exercitationem,eveniet rem expedita aliquid excepturi dicta aspernatur. Tempora dolorem consequuntur vero minima maiores dicta at?. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repudiandae dolor similique, nulla quam exercitationem, eveniet rem expedita aliquid excepturi dicta aspernatur. Tempora dolorem consequuntur vero minima maiores dicta at?
+  </p>
+  <p
+    class="p-two mt-4"
+  >
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repudiandae dolor similique, nulla quam exercitationem, eveniet rem expedita aliquid excepturi dicta aspernatur. Tempora dolorem consequuntur vero minima maiores dicta at?. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repudiandae dolor similique, nulla quam exercitationem, eveniet rem expedita aliquid excepturi dicta aspernatur. Tempora dolorem consequuntur vero minima maiores dicta at?
+  </p>
+</div>
+`;

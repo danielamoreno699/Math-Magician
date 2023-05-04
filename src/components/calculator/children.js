@@ -1,4 +1,3 @@
-/* eslint-disable-line react/no-array-index-key */
 import React, { useState } from 'react';
 import calculate from '../logic/caculate';
 
