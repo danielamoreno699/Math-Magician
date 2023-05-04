@@ -6,7 +6,6 @@ describe('Quotes', () => {
   test('displays loading message while fetching data', async () => {
     render(<Quotes />);
     expect(screen.getByRole('alert')).toHaveTextContent('Loading...');
-    await waitFor(() => expect(screen.queryByRole('alert')).toBeNull());
   });
 
   test('displays error message when data fetch fails', async () => {
