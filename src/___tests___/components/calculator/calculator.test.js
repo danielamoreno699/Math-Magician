@@ -5,5 +5,6 @@ describe('Calculator', () => {
   test('renders correctly', () => {
     const { container } = render(<Calculator />);
     expect(container.querySelector('.calculator-text')).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
