@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import CalcComponents from './children';
 
-const Calculator = ({ value }) => (
+const Calculator = () => (
   <div className="mt-5">
     <div className="container mt-5">
       <div className="row d-flex justify-content-center">
@@ -9,7 +8,7 @@ const Calculator = ({ value }) => (
           <h2 className="calculator-text">Let&apos;s do some math</h2>
         </div>
         <div className="col">
-          <CalcComponents value={value} />
+          <CalcComponents />
         </div>
 
       </div>
@@ -20,7 +19,3 @@ const Calculator = ({ value }) => (
 
 );
 export default Calculator;
-
-Calculator.propTypes = {
-  value: PropTypes.string.isRequired,
-};
