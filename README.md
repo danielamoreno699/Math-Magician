@@ -53,6 +53,8 @@ By building this application, using React.
 
 To get a local copy up and running, follow these steps.
 
+live deployment: https://math-magician-dvak.onrender.com
+
 ### Prerequisites
 
 In order to run this project you need the following tools:
