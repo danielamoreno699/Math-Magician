@@ -1,0 +1,8 @@
+staticSites:
+  - name: your-app-name
+    buildCommand: yarn build
+    publishDir: build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
