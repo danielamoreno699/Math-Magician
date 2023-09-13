@@ -9,7 +9,7 @@
 }
 
 body {
-  height: 90vh;
+  height: 100vh;
   background-image: url('https://freevector-images.s3.amazonaws.com/uploads/vector/preview/40529/White_Background_generated.jpg');
   background-size: cover;
 }
@@ -38,7 +38,7 @@ body {
   padding: 1rem;
 }
 
-.container-calc{
+.container-calc {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,9 @@ body {
 
 .wrapper {
   /* background: #06161e; */
+
   /* width: 30rem; */
+
   /* height: 32rem;
   padding: 1rem;
   border-radius: 1rem; */
@@ -88,21 +90,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 23rem;
+  margin: 10rem;
 }
 
 .error {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 23rem;
+  margin: 10rem;
 }
 
 .wrapper-quote {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 23rem;
+  margin: 10rem;
 }
 
 .quote-container {
@@ -124,11 +126,30 @@ body {
   color: #666;
 }
 
-@media (min-width: 375px) and (max-width: 500px){
+@media (min-width: 375px) and (max-width: 768px) {
   .wrapper {
     width: 20rem;
-    height: 32rem;
     margin-bottom: 2rem;
   }
 
+  .wrapper-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .text {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1439px) {
+  .wrapper-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem;
+  }
 }
