@@ -46,11 +46,11 @@ body {
 }
 
 .wrapper {
-  background: #06161e;
-  width: 30rem;
-  height: 32rem;
+  /* background: #06161e; */
+  /* width: 30rem; */
+  /* height: 32rem;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 1rem; */
   box-shadow: 4px 33px 50px 26px rgba(0, 0, 0, 0.1);
 }
 
