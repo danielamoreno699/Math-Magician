@@ -1,39 +1,19 @@
+import React from 'react';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 
-const Navbar = () => (
-  <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-4 d-flex  justify-content-between custom-navbar">
-    <div>
-
-      <h2 className="Magician-txt">Math Magicians</h2>
-
-    </div>
-
-    <div className="navbar-nav">
-
-      <Link
-        className="navbar-brand home-page"
-        to="/"
-      >
-        Home
-      </Link>
-
-      <NavLink
-        className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}
-        to="/Calculator"
-      >
-        Calculator
-      </NavLink>
-
-      <NavLink
-        className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}
-        to="/Quotes"
-      >
-        Quotes
-      </NavLink>
-
-    </div>
-
-  </nav>
+const MyNavbar = () => (
+  <Navbar bg="dark" variant="dark">
+    <Container>
+      <Link to="/" className="navbar-brand ">Math Magician</Link>
+      <Nav className="me-auto">
+        <NavLink to="/" className="nav-link" activeClassName="active">Home</NavLink>
+        <NavLink to="/Calculator" className="nav-link" activeClassName="active">Calculator</NavLink>
+        <NavLink to="/Quotes" className="nav-link" activeClassName="active">Quotes</NavLink>
+      </Nav>
+    </Container>
+  </Navbar>
 );
 
-export default Navbar;
+export default MyNavbar;
+
