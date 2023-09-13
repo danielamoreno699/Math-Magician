@@ -38,9 +38,16 @@ body {
   padding: 1rem;
 }
 
+.container-calc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
 .wrapper {
   background: #06161e;
-  width: 50rem;
+  width: 30rem;
   height: 32rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -115,4 +122,13 @@ body {
 .author {
   font-size: 20px;
   color: #666;
+}
+
+@media (min-width: 375px) and (max-width: 500px){
+  .wrapper {
+    width: 20rem;
+    height: 32rem;
+    margin-bottom: 2rem;
+  }
+
 }
